@@ -1,0 +1,35 @@
+"""Write a python function named “register_party” that takes a list of parties. Each party
+must be presented by key value pairs. The keys should be “party_name”, “reg_number”,
+“member_count”). The function should check if the new party has acceptable number of
+members for it to be registered as per the requirements narrated in the scenario. Note: this
+function must be written under the git branch that you created in question 1.4 above."""
+
+def register_party(parties):
+    for party in parties:
+        party_name = input("party_name")
+        reg_number = input("reg_number")
+        member_count = 0
+
+        
+        if member_count >= 1000:
+            print("Party '{party_name}' with registration number {reg_number} has sufficient members and can be registered.")
+        else:
+            print("Party '{party_name}' with registration number {reg_number} does not have sufficient members and cannot be registered.")
+
+
+parties = [
+    {"party_name": " ", "reg_number": 10000001, "member_count": 0},
+
+]
+
+register_party(parties)
+
+
+thelast_member = 10003318
+mk_members = 5300
+
+if mk_members >= 1000:
+    thelast_member += 1
+    print(f"MK Party can be registered with registration number {thelast_member}.")
+else:
+    print("MK Party does not have sufficient members and cannot be registered.")
