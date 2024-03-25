@@ -1,0 +1,61 @@
+"""3 Implement a function called “update_voter_info” where each key is a voter_id and the
+value is another dictionary containing name, voting_district and has_voted.
+ The function should update the voter’s information or add a vote if not already voted.
+
+   Very important hint:
+you should think of best practices for source code management and collaboration using git,
+for instances; is it a good practice to answer this question under the directories that are already
+existing or you should create a feature branch for development. From this question onwards
+you won’t be guided like you have been on questions prior to this. Always think best practices
+for software development as discussed in class. Create a new file, new directory, new feature
+branch where necessary"""
+
+#Implement a function called “update_voter_info” 
+#where each key is a voter_id and the value is another dictionary containing name, voting_district and has_voted.
+
+def update_voter_info(voter_info, voter_id, name, voting_district, has_voted):
+
+
+
+    voter_info[voter_id] = {"name": name, "voting_district": voting_district, "has_voted": has_voted}
+ 
+input("Enter your name")
+name2 = " "
+voter_info = {}
+
+if voter_info == name2 :
+    print("The name already exists ")
+
+else:
+    print('You have been registered')
+
+update_voter_info(voter_info, 0 , " ", " ", True)
+
+"""4 Using list comprehension and the filter function, write a piece of code that filters out all
+parties from a given list that have less than 1,000 members. Use ALL the parties that are on
+the ballot paper in Annexure A as your list elements, only capture their abbreviation as
+elements e.g. capture EFF on your list of elements instead of “Economic Freedom Fighters”
+as it is displayed using EFF abbreviation on the ballot paper."""
+
+National = ["ANC", "DA", "EFF", "AFM","AASD", "ASA", "AJ", "ATA","APO", "APC","BRA","BFLF","CPSA", " CPM","CSA", "COP","DLC","EEF", "F4SD","FD"]
+
+filtered_parties = [party for party in National if len(party) >= 4]
+print(filtered_parties)
+
+#Rewrite the list comprehension in question 2.4 into a normal list data structure.
+
+normalist = list(filter(lambda x: len(x) >= 4, National))
+print(normalist)
+
+# Write a python expression using a lambda function and the filter function to extract only
+#those records where the voter is marked as registered ('registered': True). Assign the result
+#to a variable named “registered_voters”
+
+voters = [
+    
+    {"name": " ", "registered": True},
+    {"name": " ", "registered": True}
+]
+
+registered_voters = list(filter(lambda x: x["registered"], voters))
+print(registered_voters)
